@@ -1,0 +1,105 @@
+ul.status-list {
+    list-style: none;
+    text-align: right;
+    margin: 0 0 0;
+    padding: 0 0 0;
+}
+ul.status-list li {
+    margin: 0 0 0;
+    padding: 0 0 0;
+}
+
+ul.status-value {
+    list-style: none;
+    text-align: right;
+    margin: 0 0 0;
+    padding: 0 0.5em 0;
+}
+ul.status-value li {
+    margin: 0 0 0;
+    padding: 0 0 0;
+    padding-left: 0.5em
+}
+
+div.baseBox {
+    display: inline-block;
+    position: relative;
+    margin: 1.5em 0.5em;
+    padding: 0 1em 0;
+    background: white;
+    border: solid 2px lightskyblue;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
+}
+div.baseBox span.title {
+    display: inline-block;
+    position: relative;
+    margin: -0.25em -1em 0.25em;
+    padding: 0.25em 1em 0.25em;
+    min-width: 100%;
+    font-size: 110%;
+    text-align: center;
+    background: lightskyblue;
+    color: snow;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px gray;
+}
+
+div.partnerBox {
+    display: inline-block;
+    position: relative;
+    margin: 1.5em 0.5em;
+    padding: 0 1em 0;
+    background: white;
+    border: solid 2px lightsalmon;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
+}
+div.partnerBox span.title {
+    display: inline-block;
+    position: relative;
+    margin: -0.25em -1em 0.25em;
+    padding: 0.25em 1em 0.25em;
+    min-width: 100%;
+    font-size: 110%;
+    text-align: center;
+    background: lightsalmon;
+    color: snow;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px gray;
+}
+
+div.plus{
+    margin: -0.4em 1.7em;
+    color: snow;
+    font-size: 40;
+    text-shadow: 1px 1px 1px #555, -1px 1px 1px #555, 1px -1px 1px #555,
+    1px -1px 1px #555, 1px 1px 1px #555, -1px 1px 1px #555,
+    1px -1px 1px #555, -1px -1px 1px #555, 0px 3px 4px gray;
+}
+div.arrow{
+    margin: -0.4em 1.7em;
+    color: snow;
+    font-size: 40;
+    text-shadow: 1px 1px 1px #555, -1px 1px 1px #555, 1px -1px 1px #555,
+    1px -1px 1px #555, 1px 1px 1px #555, -1px 1px 1px #555,
+    1px -1px 1px #555, -1px -1px 1px #555, 0px 3px 4px gray;
+}
+div.redirect{
+    margin: -0.4em 1.7em;
+    color: snow;
+    font-size: 40;
+    text-shadow: 1px 1px 1px #555, -1px 1px 1px #555, 1px -1px 1px #555,
+    1px -1px 1px #555, 1px 1px 1px #555, -1px 1px 1px #555,
+    1px -1px 1px #555, -1px -1px 1px #555, 0px 3px 4px gray;
+}
+
+hr.boundary {
+    position: relative;
+    top: -0.4em;
+    margin: -0.3em 0.3em;
+}
+
+body.background {
+    # background-color: #f5fffa;
+    background-color: ghostwhite;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 70px);
+}

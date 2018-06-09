@@ -1,0 +1,61 @@
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8"/>
+    <script src="./jquery-3.3.1.slim.js"></script>
+
+    <script src="./RtreeMbr.js"></script>
+    <script src="./RtreeNode.js"></script>
+    <script src="./Rtree.js"></script>
+
+    <script src="./Status.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="./PowerUpper.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="./TransUpper.js" type="text/javascript" charset="UTF-8"></script>
+
+    <script src="./StarString.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="./StatusInfo.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="./MaxStatusSearcher.js" type="text/javascript" charset="UTF-8"></script>
+
+    <script src="./Interface.js" type="text/javascript" charset="UTF-8"></script>
+
+    <link rel="stylesheet" type="text/css" href="Style.css">
+  </head>
+
+  <body class="background">
+    <form>
+      <fieldset>
+	<legend>入力フォーム</legend>
+	<p>
+	  <select id="TransCountSelector" onchange="Interface.prototype.getTransCount()">
+	    <option value="Undefined">転生段数</option>
+	    <option value="1">1</option>
+	    <option value="2">2</option>
+	    <option value="3">3</option>
+	    <option value="4">4</option>
+	    <option value="5">5</option>
+	    <option value="6">6</option>
+	  </select>
+	  <table id="StatusInputForm">
+	  </table>
+	  <button type="button" onclick="Interface.prototype.readStatus()">計算</button>
+	  <input type="checkbox" id="TextOutputCheck">テキスト出力</input>
+	</p>
+      </fieldset>
+
+      <fieldset>
+	<legend>入力補助</legend>
+	<p>
+	  <textarea id="StatusInputText" rows="10"></textarea>
+	</p>
+	<p>
+	  <button type="button" onclick="Interface.prototype.restoreStatus()">入力フォームへ反映</button>
+	</p>
+      </fieldset>
+
+      <fieldset>
+	<legend>計算結果</legend>
+	<p id="ResultOutputField">	  
+	</p>
+      </fieldset>  
+    </form>
+  </body>
+</html>
