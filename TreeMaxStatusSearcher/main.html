@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html style="overflow: auto;">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>最大ステータス計算機 &#9734;4</title>
+
+    <link rel="stylesheet" href="./vendor/Treant.css"/>
+    <link rel="stylesheet" href="./vendor/perfect-scrollbar/perfect-scrollbar.css"/>
+    <link rel="stylesheet" href="./TreeMaxStatusSearcher.css"/>
+  </head>
+  <body class="background">
+    <script src="./vendor/raphael.js"></script>
+    <script src="./vendor/Treant.js"></script>
+    <script src="./vendor/jquery.min.js"></script>
+    <script src="./vendor/jquery.easing.js"></script>
+    <script src="./vendor/thread.js"></script>
+    <script src="./index/RtreeMbr.js"></script>
+    <script src="./index/RtreeNode.js"></script>
+    <script src="./index/Rtree.js"></script>
+    <script src="./primitive/Status.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="./primitive/PowerUpper.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="./primitive/TransUpper.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="./StarString.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="./StatusInfo.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="./StatusTreeConverter.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="./MaxStatusSearcher.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="./FourStarCalculator.js" type="text/javascript" charset="UTF-8"></script>
+
+    <script src="./Interface.js" type="text/javascript" charset="UTF-8"></script>
+
+    <p>
+      使い方は<a href="./description/desc.html">こちら</a>
+    </p>
+    <form>
+      <fieldset>
+	<legend>最大化設定</legend>
+	<input type="checkbox" checked="true" id="Status-0-Max-Check">HP</input>
+	<input type="checkbox" checked="true" id="Status-1-Max-Check">MP</input>
+	<input type="checkbox" checked="true" id="Status-2-Max-Check">攻撃</input>
+	<input type="checkbox" checked="true" id="Status-3-Max-Check">防御</input>
+	<input type="checkbox" checked="true" id="Status-4-Max-Check">素早さ</input>
+	<input type="checkbox" checked="true" id="Status-5-Max-Check">賢さ</input>
+	<button type="button" onclick="Interface.prototype.changeMaximizeAll(true)">全部設定</button>
+	<button type="button" onclick="Interface.prototype.changeMaximizeAll(false)">全部解除</button>
+      </fieldset>
+      <fieldset>
+	<legend>入力フォーム</legend>
+	<select id="TransCountSelector" onchange="Interface.prototype.getTransCount()">
+	  <option value="Undefined">転生段数</option>
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	  <option value="4">4</option>
+	  <option value="5">5</option>
+	  <option value="6">6</option>
+	</select>
+	<table id="StatusInputForm">
+	</table>
+	<button type="button" onclick="Interface.prototype.startSearch()">計算</button>
+	<br/><br/>
+	<input type="checkbox" checked="true" id="FourStarDiffCheck">44...4差分</input>
+	<input type="checkbox" id="TextOutputCheck">テキスト出力</input>
+      </fieldset>
+
+      <fieldset>
+	<legend>入力補助</legend>
+	<div><textarea id="StatusInputText" rows="10"></textarea></div>
+	<div><button type="button" onclick="Interface.prototype.restoreStatus()">入力フォームへ反映</button></div>
+      </fieldset>
+      <fieldset>
+	<legend>計算結果</legend>
+	<div class="chart" id="ResultOutputField" style="min-height: 100%; min-width: 100%; display: inline-block; overflow: auto;"></div>
+      </fieldset>  
+    </form>
+  </body>
+</html>
