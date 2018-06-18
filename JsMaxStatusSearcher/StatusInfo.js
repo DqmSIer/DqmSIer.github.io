@@ -1,5 +1,5 @@
 const StatusInfo = (function() {
-		const STATUS_FIELD_NAME = ["HP", "MP:", "攻撃:", "防御:", "賢さ:", "素早さ:"];
+		const STATUS_FIELD_NAME = ["HP", "MP:", "攻撃:", "防御:", "素早さ:", "賢さ:"];
 		
 		const StatusInfo = function(_star, _cost, _stat, _bonus, _baseAddr, _partnerAddr, _combi) {
 			this.star = _star;
@@ -25,12 +25,12 @@ const StatusInfo = (function() {
 				
 				if (_statusInfo.partnerAddr !== null) {
 					// _dstTag.appendChild(document.createTextNode("+++++ Power UpWith x" + _statusInfo.partnerAddr.cost + " +++++\n"));
-					_dstTag.innerHTML += "+++++ Power UpWith x" + _statusInfo.partnerAddr.cost + " +++++\n";
+					_dstTag.innerHTML += "+++++ Power Up With x" + _statusInfo.partnerAddr.cost + " +++++\n";
 					PrintFunc(_statusInfo.partnerAddr, _dstTag);
 				}
 				else {
 					// _dstTag.appendChild(document.createTextNode("\n********** Trans Up **********"));
-					_dstTag.innerHTML += "\n********** Trans Up **********";
+					_dstTag.innerHTML += "\n********** Trans Up **********\n";
 				}
 				// _dstTag.appendChild(document.createTextNode("\n"));
 				_dstTag.innerHTML += "\n";
