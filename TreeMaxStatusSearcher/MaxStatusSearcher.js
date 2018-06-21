@@ -34,9 +34,9 @@ const MaxStatusSearcher = (function() {
 									    formerInfoAddr, null, nextCombi);
 
 					_puBaseIndex.insert(Object.assign(new StatusInfo(),  nextStatusInfo), StatusGetter, StatusGetter);
-					_puPartnerIndex.insert(Object.assign(new StatusInfo(), nextStatusInfo), BonusGetter, BonusGetter);
+					_puPartnerIndex.update(Object.assign(new StatusInfo(), nextStatusInfo), BonusGetter, BonusGetter, PowerUpCompar);
 					nextStatusInfo.bonus = TransUpper.prototype.getTransUpValue(nextStatusInfo.stat, _baseStatusAddr);
-					_trBaseIndex.insert(nextStatusInfo, BonusGetter, BonusGetter);
+					_trBaseIndex.update(nextStatusInfo, BonusGetter, BonusGetter, TransUpCompar);
 
 					maxStatusInfoAddr = Object.assign(new StatusInfo(), nextStatusInfo);
 				}
